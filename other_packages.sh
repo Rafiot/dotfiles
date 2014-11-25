@@ -1,4 +1,5 @@
 #!/bin/bash
 
-apt-get install terminator yakuake pidgin thunderbird chromium-browser
+sudo apt-get install terminator yakuake pidgin thunderbird chromium-browser \
+    apparmor-profiles
 
