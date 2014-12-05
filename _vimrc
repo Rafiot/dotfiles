@@ -231,28 +231,22 @@ au BufRead,BufNewFile *.md,*.markdown set syntax=markdown
 " Python
 let g:syntastic_python_checkers=["flake8"]
 let g:syntastic_python_flake8_args="--ignore=E501,W601"
-"let g:pymode_lint_ignore="E501,W601"
+
 au BufRead,BufNewFile *.py set filetype=python
+au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 let python_highlight_all = 1
-au FileType python set colorcolumn=72
+au FileType python set colorcolumn=80
 
-if filereadable(expand("~/.vim/PythonTidy.py"))
-    function! PythonTidySaver()
-        let s:saveview = winsaveview()
-        exe '%!python ~/dotfiles/_vim/PythonTidy.py'
-        call winrestview(s:saveview)
-        unlet s:saveview
-    endfunction
-
-    cmap Ptidy call PythonTidySaver()
-endif
-
-au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
 
 set encoding=utf-8
 autocmd BufEnter * if &filetype == "" | setlocal ft=txt | endif
+
+" config skeletons
+let skeletons#autoRegister = 1
+let skeletons#skeletonsDir = "~/.vim/skeletons"

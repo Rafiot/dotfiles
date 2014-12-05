@@ -30,7 +30,7 @@
 	url = https://github.com/ervandew/supertab.git
 [submodule "_vim/bundle/fugitive"]
 	path = _vim/bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "_vim/bundle/snipmate"]
 	path = _vim/bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
@@ -61,3 +61,9 @@
 [submodule "_vim/bundle/syntastic"]
 	path = _vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "_vim/bundle/vim-skeletons"]
+	path = _vim/bundle/vim-skeletons
+	url = https://github.com/pgilad/vim-skeletons.git
+[submodule "_vim/bundle/ultisnips"]
+	path = _vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
