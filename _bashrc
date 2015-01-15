@@ -1,13 +1,15 @@
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
-    export PATH="$HOME/bin:$PATH"
-fi
-if [ -d "$HOME/reversing/ida-6.6/" ]; then
-    export PATH="$HOME/reversing/ida-6.6/:$PATH"
-fi
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+
+if [[ $- == *i* ]]; then
+    # set PATH so it includes user's private bin if it exists
+    if [ -d "$HOME/bin" ]; then
+        export PATH="$HOME/bin:$PATH"
+    fi
+    if [ -d "$HOME/reversing/ida-6.7/" ]; then
+        export PATH="$HOME/reversing/ida-6.7/:$PATH"
+    fi
+fi
 
 # Lang
 #export LANG="de_DE.UTF-8"
@@ -229,5 +231,10 @@ if [[ ${EUID} != 0 ]] ; then
         PS1="$PS1\$(parse_svn_branch)"
     fi
     export PS1="$PS1 "
+fi
+
+if [ ! -z "$VIRTUAL_ENV" ]; then
+    PS1="\[\033[01;34m\]\$(basename '$VIRTUAL_ENV')\e[0m $PS1"
+    export PS1
 fi
 
