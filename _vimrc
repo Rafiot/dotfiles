@@ -245,6 +245,9 @@ au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smart
 let python_highlight_all = 1
 au FileType python set colorcolumn=80
 
+" JS
+let g:syntastic_javascript_checkers = ['jshint']
+
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
 
