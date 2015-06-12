@@ -18,5 +18,8 @@ git submodule add --force https://github.com/xolox/vim-misc _vim/bundle/misc
 
 git submodule add --force https://github.com/SirVer/ultisnips.git _vim/bundle/ultisnips
 git submodule add --force https://github.com/pgilad/vim-skeletons.git _vim/bundle/vim-skeletons
+git submodule add --force https://github.com/davidhalter/jedi-vim.git _vim/bundle/jedi-vim
+
+git submodule update --init --recursive
 
 cp /usr/share/vim-scripts/colors/desert256.vim _vim/colors/

@@ -67,3 +67,6 @@
 [submodule "_vim/bundle/ultisnips"]
 	path = _vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "_vim/bundle/jedi-vim"]
+	path = _vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
