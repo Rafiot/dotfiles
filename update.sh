@@ -1,7 +1,6 @@
 #!/bin/bash
 
-curl -so ./_vim/autoload/pathogen.vim \
-    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+curl -LSso ./_vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 git submodule foreach git checkout master
 git submodule foreach git pull
