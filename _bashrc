@@ -6,8 +6,8 @@ if [[ $- == *i* ]]; then
     if [ -d "$HOME/bin" ]; then
         export PATH="$HOME/bin:$PATH"
     fi
-    if [ -d "$HOME/reversing/ida-6.7/" ]; then
-        export PATH="$HOME/reversing/ida-6.7/:$PATH"
+    if [ -d "$HOME/reversing/ida-6.8/" ]; then
+        export PATH="$HOME/reversing/ida-6.8/:$PATH"
     fi
 fi
 
@@ -35,7 +35,7 @@ fi
 # Some cool things
 export HISTSIZE=1000
 export HISTFILESIZE=1000
-export GREP_OPTIONS='--color=auto --exclude=*~'
+alias grep="grep --color=auto --exclude=*~ --exclude=*.pyc"
 if [ -f "/usr/bin/firefox" ]; then
     export BROWSER="firefox"
 fi
@@ -233,8 +233,5 @@ if [[ ${EUID} != 0 ]] ; then
     export PS1="$PS1 "
 fi
 
-if [ ! -z "$VIRTUAL_ENV" ]; then
-    PS1="\[\033[01;34m\]\$(basename '$VIRTUAL_ENV')\e[0m $PS1"
-    export PS1
-fi
-
+# added by Pew
+source $(pew shell_config)

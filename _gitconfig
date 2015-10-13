@@ -1,3 +1,5 @@
+[init]
+  templateDir = ~/.git_template
 [core]
     editor = vim
     ignorecase = true

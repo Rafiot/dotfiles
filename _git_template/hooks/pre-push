@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Origin: https://gist.github.com/pixelhandler/5718585
+
+# TL;DR: never ever allow to push the prod branch
+
+# Usecase: I commit passwords in the prod branch and I don't want to do a mistake.
+
+protected_branch='prod'
+
+policy='[Policy] Never push on the '$protected_branch' branch!'
+
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+
+do_exit(){
+  echo $policy
+  exit 1
+}
+
+if [ $current_branch = $protected_branch ]; then
+  do_exit
+fi
+
+unset do_exit
+
+exit 0
