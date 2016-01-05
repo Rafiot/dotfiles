@@ -4,7 +4,9 @@ sudo apt-get install vim vim-scripts vim-nox pylint build-essential curl\
                      exuberant-ctags tmux fonts-inconsolata htop python-pip \
                      python-virtualenv
 
-sudo pip install --upgrade flake8
+
+pip install --user --upgrade setuptools pip
+pip install --user --upgrade flake8 pew
 
 git rm -r --cached _vim/bundle/
 rm -rf _vim/bundle/*

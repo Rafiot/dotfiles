@@ -6,8 +6,8 @@ if [[ $- == *i* ]]; then
     if [ -d "$HOME/bin" ]; then
         export PATH="$HOME/bin:$PATH"
     fi
-    if [ -d "$HOME/reversing/ida-6.8/" ]; then
-        export PATH="$HOME/reversing/ida-6.8/:$PATH"
+    if [ -d "$HOME/reversing/ida-6.9/" ]; then
+        export PATH="$HOME/reversing/ida-6.9/:$PATH"
     fi
 fi
 

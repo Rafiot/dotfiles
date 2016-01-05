@@ -5,4 +5,5 @@ curl -LSso ./_vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/
 git submodule foreach git checkout master
 git submodule foreach git pull
 
-sudo pip install --upgrade flake8
+pip install --user --upgrade setuptools pip
+pip install --user --upgrade flake8 pew

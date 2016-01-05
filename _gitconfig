@@ -34,3 +34,7 @@
 	last = log -1 head
 [remote-hg]
 	hg-git-compat = true
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
