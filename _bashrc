@@ -18,6 +18,7 @@ fi
 #export LANG="de_DE.UTF-8"
 # Terminal un english
 export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 # Less Stuff
 if [ -f "/usr/bin/most" ]; then
