@@ -165,6 +165,7 @@ alias scpresume="rsync --partial --progress --rsh=ssh"
 alias sslTelnet='openssl s_client -connect ' # host:port
 alias todo='ssh -qt Hetzner todo.sh' # command
 alias tmux='tmux -2'
+function weather() { curl -4 http://wttr.in/"$1"; }
 
 # Alias definitions.
 if [ -f ~/.bash_aliases ]; then
