@@ -233,12 +233,15 @@ autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 so
 au BufRead,BufNewFile *.md,*.markdown set syntax=markdown
 
 " Python
+let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_exec='python3'
-let g:syntastic_python_flake8_args=['-m', 'flake8', "--ignore=E501,W601"]
+let g:syntastic_python_flake8_args='--ignore=E501,W601'
 
 au BufRead,BufNewFile *.py set filetype=python
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+au BufRead,BufNewFile *.rascal set filetype=python
+au BufRead *.rascal set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+
 
 let g:SuperTabDefaultCompletionType = "context"
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
