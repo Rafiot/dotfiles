@@ -1,3 +1,4 @@
+# $include /etc/inputrc
 set editing-mode vi
 
 # Adds punctuation as word delimiters
@@ -31,11 +32,20 @@ set keymap vi-insert
 "\e[5~": history-search-backward
 "\e[6~": history-search-forward
 # gnome / konsole / others (control + arrow key)
-"\e[C": forward-word
-"\e[D": backward-word
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
 # Tmux
 "\eOD": backward-word
 "\eOC": forward-word
+
+# mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+
 
 # IPython needs this to appear at the bottom of the
 # file for clear-screen to work
