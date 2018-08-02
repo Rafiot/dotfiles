@@ -9,8 +9,11 @@ if [[ $- == *i* ]]; then
     if [ -d "$HOME/.local/bin" ]; then
         export PATH="$HOME/.local/bin:$PATH"
     fi
-    if [ -d "$HOME/reversing/ida-6.9/" ]; then
-        export PATH="$HOME/reversing/ida-6.9/:$PATH"
+    if [ -d "$HOME/reversing/ida-6.95/" ]; then
+        export PATH="$HOME/reversing/ida-6.95/:$PATH"
+    fi
+    if [ -d "$HOME/.gem/ruby/2.3.0/bin/" ]; then
+        export PATH="$HOME/.gem/ruby/2.3.0/bin/:$PATH"
     fi
 fi
 
@@ -242,8 +245,8 @@ fi
 # added by Pew
 source $(pew shell_config)
 
-PATH="/home/raphael/perl5/bin${PATH+:}${PATH}"; export PATH;
-PERL5LIB="/home/raphael/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/raphael/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/raphael/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/raphael/perl5"; export PERL_MM_OPT;
+#PATH="/home/raphael/perl5/bin${PATH+:}${PATH}"; export PATH;
+#PERL5LIB="/home/raphael/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+#PERL_LOCAL_LIB_ROOT="/home/raphael/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+#PERL_MB_OPT="--install_base \"/home/raphael/perl5\""; export PERL_MB_OPT;
+#PERL_MM_OPT="INSTALL_BASE=/home/raphael/perl5"; export PERL_MM_OPT;

@@ -55,13 +55,23 @@ map <leader>r :RopeRename<CR>
 filetype off
 call pathogen#helptags()
 call pathogen#infect()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 " ==========================================================
 " Basic Settings
 " ==========================================================
 syntax on                     " syntax highlighing
 filetype on                   " try to detect filetypes
-filetype plugin indent on     " enable loading indent file for filetype
+" filetype plugin indent on     " enable loading indent file for filetype
 "set number                    " Display line numbers
 set numberwidth=1             " using only 1 column (and 1 space) while possible
 set background=dark           " We are using dark background in vim
@@ -233,6 +243,8 @@ autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 so
 au BufRead,BufNewFile *.md,*.markdown set syntax=markdown
 
 " Python
+" let g:ycm_log_level = 'debug'
+let g:ycm_python_binary_path = 'python3'
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--ignore=E501,W601'
